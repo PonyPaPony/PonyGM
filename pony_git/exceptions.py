@@ -1,0 +1,2 @@
+class GitManagerError(Exception):
+    pass
