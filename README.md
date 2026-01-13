@@ -1,5 +1,6 @@
 # 🐴 Pony Git Manager (pony-git)
 
+[![PyPI version](https://badge.fury.io/py/pony-git.svg)](https://pypi.org/project/pony-git/)
 [![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Development Status](https://img.shields.io/badge/status-alpha-orange.svg)]()
@@ -56,7 +57,6 @@ CLI-обёртка над Git, которая упрощает и автомат
 ---
 
 ## 📦 Установка
-> Доступно после публикации первого релиза.
 
 ### Из PyPI
 ```bash
@@ -78,9 +78,9 @@ pony-git info
 # Выполнение команд
 pony-git init
 pony-git add -m "Initial commit"
-pony-git branch -M main
+pony-git branch -M <branch-name>
 pony-git remote add origin https://github.com/username/repo.git
-pony-git push
+pony-git push -M
 ```
 
 ### Обновление существующего проекта
@@ -92,7 +92,7 @@ pony-git status
 pony-git add -m "Добавлена новая функция"
 pony-git tag -a v1.0.1 -m "Патч релиз" # опционально
 pony-git push
-pony-git push --tags # если создавали тег
+pony-git push -T # или --tags если создавали тег
 ```
 
 ---
@@ -160,7 +160,7 @@ pony-git status --porcelain
 # Обычный push
 pony-git push
 # Push с тегами (одна команда)
-pony-git push --tags
+pony-git push -T # или --tags
 ```
 
 ### 4. Удаление файлов
